@@ -1,0 +1,11 @@
+step 1 : create product model and give it a category by adding ObjectId as type (import this objectid from mongoose.schema) and give it ref as Category
+
+step 2 : create product route and controller
+
+step 3 : install formidable and add the configuration inside the product controller get the path by file system (fs) and add the contentType then persiste the image to database
+
+step 4 : validate using joi before persisting
+
+step 5 : show product by id
+
+step 6 : update product (use lodash package to assign product field to the entered fields)

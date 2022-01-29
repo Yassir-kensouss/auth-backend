@@ -1,0 +1,7 @@
+- step 1 : import express | dotenv
+- step 2 : initialize app from express()
+- step 3 : add port variable to the .env file assign it to a variable and make app listening to the port
+- step 4 : import mongoose and connect to db
+- step 5 : add Routing system
+- step 6 : add controllers
+- step 7 : add models folder and add the user file then add userSchema and its attributes
