@@ -1,9 +1,0 @@
-step 1 : install express-jwt and add it as a middleware (auth.js/middlware) , this middleware to check if the user authenticated or not
-
-step 2 : (get user by id) -> when the url with the user id has been trigerd , it will call the method we create inside the user middlware , this method will find the user by id that we passed and it will assign it to an attribute called profile inside req ,then getOneUser method that we create will return a user variable assigned to req.profile which cames from userById method (middleware) holding the user searched by id with his infos
-
-step 3 : add requireSignIn middleware when we want to find user by id
-
-step 4 : (check is auth) add isAuth middleware to check if the user autenticated or not by comparing req.profile.id is equal req.auth.id 
-
-step 5 : (check is admin) add isAdmin middleware to check if the req.auth.role == 0 if its not send error (you should add role inside the generated token created in authController)
