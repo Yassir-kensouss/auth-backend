@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const expressValidatore = require("express-validator");
 const cookieParser = require("cookie-parser");
 
@@ -25,6 +26,7 @@ mongoose
 app.use(express.json());
 app.use(cookieParser());
 app.use(expressValidatore());
+app.use(cors());
 
 // ** Routes middlware
 app.use("/api", authRoutes);

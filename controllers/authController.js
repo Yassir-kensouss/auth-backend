@@ -14,6 +14,8 @@ exports.signup = (req, res) => {
         return res.status(400).send(err);
       }
     }
+    user.hashed_password = undefined;
+    user.salt = undefined;
     res.send(user);
   });
 };
@@ -41,11 +43,11 @@ exports.signin = (req, res) => {
 
     res.cookie("token", token, { expire: new Date() + 793923723 });
 
-    const { _id, name, email, role } = user;
+    const { _id, first_name, last_name, email, role } = user;
 
     res.json({
       token,
-      user: { _id, name, email, role },
+      user: { _id, first_name, last_name, email, role },
     });
   });
 };
